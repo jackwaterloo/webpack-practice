@@ -1,14 +1,23 @@
 # Webpack Practice
 
-This project is a simple setup to practice using [Webpack](https://webpack.js.org/).
+This project is a learning exercise for understanding [Webpack](https://webpack.js.org/), following The Odin Project's [Webpack lesson](https://www.theodinproject.com/lessons/javascript-webpack).
 
-This is based off Odin Project's Webpack lesson here: [https://www.theodinproject.com/lessons/javascript-webpack](https://www.theodinproject.com/lessons/javascript-webpack)
+## Current Progress
+
+The project currently demonstrates:
+- Basic Webpack configuration with development mode
+- ES Module system (imports/exports)
+- HTML processing with HtmlWebpackPlugin
+- CSS loading with style-loader and css-loader
+- Asset management for images and other files
 
 ## Project Structure
 
 - `src/` — Source files
-  - `index.js` — Entry point
+  - `index.js` — Main entry point
   - `greeting.js` — Example module
+  - `styles.css` — Stylesheet demonstrating CSS imports
+  - `template.html` — HTML template for HtmlWebpackPlugin
 - `webpack.config.js` — Webpack configuration
 - `dist/` — Output directory (created after build)
 
@@ -23,14 +32,19 @@ This is based off Odin Project's Webpack lesson here: [https://www.theodinprojec
    ```bash
    npx webpack
    ```
-   This will bundle your code and output `dist/main.js`.
 
-3. **Check the output:**
-   The bundled file will log a greeting to the console when run in a browser or Node.js.
+3. **View the output:**
+   Open `dist/index.html` in your browser to see:
+   - Purple background from CSS
+   - Console output showing "Hello, Odinite!"
 
-## What this demonstrates
-- Basic Webpack configuration
-- ES module imports/exports
-- Bundling JavaScript files
+## Learning Goals
 
-Feel free to modify the source files and re-run the build to see how Webpack updates the output.
+Following The Odin Project curriculum to learn:
+- Bundling JavaScript modules
+- Managing assets with Webpack
+- Development workflow optimization
+- Source mapping and debugging
+- Development server configuration
+
+Feel free to explore the code and configuration to understand how Webpack works!
