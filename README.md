@@ -1,27 +1,42 @@
 # Webpack Practice
 
-This project is a learning exercise for understanding [Webpack](https://webpack.js.org/), following The Odin Project's [Webpack lesson](https://www.theodinproject.com/lessons/javascript-webpack).
+This project demonstrates using [Webpack](https://webpack.js.org/) for bundling and asset management, following The Odin Project's [Webpack lesson](https://www.theodinproject.com/lessons/javascript-webpack).
 
-## Current Progress
+## Current Implementation
 
-The project currently demonstrates:
-- Basic Webpack configuration with development mode
-- ES Module system (imports/exports)
-- HTML processing with HtmlWebpackPlugin
-- CSS loading with style-loader and css-loader
-- Asset management for images and other files
+The project demonstrates:
+- Webpack configuration in development mode
+- Module bundling with entry/output management
+- HTML template processing via HtmlWebpackPlugin
+- CSS handling with style-loader and css-loader
+- Asset management for images using asset/resource
+- HTML asset handling with html-loader
 
 ## Project Structure
 
 - `src/` — Source files
-  - `index.js` — Main entry point
-  - `greeting.js` — Example module
-  - `styles.css` — Stylesheet demonstrating CSS imports
-  - `template.html` — HTML template for HtmlWebpackPlugin
-- `webpack.config.js` — Webpack configuration
-- `dist/` — Output directory (created after build)
+  - `index.js` — Entry point with module imports and DOM manipulation
+  - `greeting.js` — Example module exporting a greeting string
+  - `styles.css` — Stylesheet with purple background
+  - `template.html` — HTML template (processed by HtmlWebpackPlugin)
+  - `avatar-1295406_640.png` — Sample image for asset handling
+- `webpack.config.js` — Webpack configuration with loaders and plugins
+- `dist/` — Build output directory (created by Webpack)
 
-## Getting Started
+## Features
+
+1. **Module Bundling**
+   - ES6 module system for JavaScript
+   - Entry point configuration
+   - Clean output directory on each build
+
+2. **Asset Processing**
+   - CSS imports into JavaScript
+   - Image handling in JavaScript and HTML
+   - HTML template processing
+   - Automatic script injection
+
+## Usage
 
 1. **Install dependencies:**
    ```bash
@@ -33,10 +48,13 @@ The project currently demonstrates:
    npx webpack
    ```
 
-3. **View the output:**
-   Open `dist/index.html` in your browser to see:
-   - Purple background from CSS
-   - Console output showing "Hello, Odinite!"
+3. **View the result:**
+   Open `dist/index.html` to see:
+   - Purple background (CSS working)
+   - Avatar image (asset loading working)
+   - "Hello, Odinite!" in console (JS modules working)
+
+This project serves as a practical example of Webpack's core features and configuration options.
 
 ## Learning Goals
 
@@ -46,5 +64,3 @@ Following The Odin Project curriculum to learn:
 - Development workflow optimization
 - Source mapping and debugging
 - Development server configuration
-
-Feel free to explore the code and configuration to understand how Webpack works!
