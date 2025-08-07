@@ -11,6 +11,9 @@ The project demonstrates:
 - CSS handling with style-loader and css-loader
 - Asset management for images using asset/resource
 - HTML asset handling with html-loader
+- Source maps for debugging (`devtool: "eval-source-map"`)
+- Development server with file watching
+- Module bundling and asset management
 
 ## Project Structure
 
@@ -36,6 +39,11 @@ The project demonstrates:
    - HTML template processing
    - Automatic script injection
 
+3. **Development Setup**
+   - Webpack dev server for live reloading
+   - Source maps for better debugging
+   - HTML template file watching
+
 ## Usage
 
 1. **Install dependencies:**
@@ -43,24 +51,24 @@ The project demonstrates:
    npm install
    ```
 
-2. **Build the project:**
+2. **Launch Development Server:**
+   ```bash
+   npx webpack serve
+   ```
+   Visit http://localhost:8080
+
+Or you can build the output yourself and view the files in the `dist/` folder.
+
+3. **Build Project:**
    ```bash
    npx webpack
    ```
 
-3. **View the result:**
-   Open `dist/index.html` to see:
-   - Purple background (CSS working)
-   - Avatar image (asset loading working)
-   - "Hello, Odinite!" in console (JS modules working)
+## What I've Learned
+- Setting up a basic Webpack configuration
+- Configuring development tools (dev server, source maps)
+- Managing different asset types (JS, CSS, images)
+- Understanding module bundling and dependency graphs
+- Working with Webpack plugins and loaders
 
-This project serves as a practical example of Webpack's core features and configuration options.
-
-## Learning Goals
-
-Following The Odin Project curriculum to learn:
-- Bundling JavaScript modules
-- Managing assets with Webpack
-- Development workflow optimization
-- Source mapping and debugging
-- Development server configuration
+This project implements core Webpack concepts from the ground up to better understand modern web tooling.
