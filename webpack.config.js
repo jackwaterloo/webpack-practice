@@ -10,6 +10,10 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
+    devtool: "eval-source-map", // allows errors in browsers relate to our original src/ code. also allows our code to appear in sources tab in the chrome browser.
+    devServer: {
+        watchFiles: ["./src/template.html"], // The html is not bundled or inputted into JS so we need to actually watch this. Everything imported into JS is automatically watched by devServer
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html", // loads html and attach JS link to it
@@ -27,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource", // manages images handeled in JS. tells bundler that images imported are assets and not JS 
+                type: "asset/resource", // manages images handled in JS. tells bundler that images imported are assets and not JS 
             }
         ],
     },
